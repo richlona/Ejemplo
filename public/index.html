@@ -4,73 +4,91 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <link href="stylesheets/layout.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/lightbox.css" rel="stylesheet" type="text/css" media="screen" />
+    
     <title>Ejemplo Fork</title>
+    
+    <script type="text/javascript" src="javascripts/lightbox.js"></script>
+    <script type="text/javascript" src="javascripts/scriptaculous.js?load=effects,builder"></script>
     <script type="text/javascript" src="javascripts/prototype.js"></script>
     <script type="text/javascript" src="javascripts/effects.js"></script>
-    <script type="text/javascript">
 
-
-      function about() {
-        if (Element.empty('about-content')) {
-          new Ajax.Updater('about-content', 'rails/info/properties', {
-            method:     'get',
-            onFailure:  function() {Element.classNames('about-content').add('failure')},
-            onComplete: function() {new Effect.BlindDown('about-content', {duration: 0.25})}
-          });
-        } else {
-          new Effect[Element.visible('about-content') ? 
-            'BlindUp' : 'BlindDown']('about-content', {duration: 0.25});
-        }
+    <style type="text/css">
+      gallery {
+	background-color: #000;
+	padding-top:10px;
+	padding-bottom: 10px;
+	width: 630px;
       }
-      
-      window.onload = function() {
-        $('search-text').value = '';
-        $('search').onsubmit = function() {
-          $('search-text').value = 'site:rubyonrails.org ' + $F('search-text');
-        }
+      gallery ul {
+	list-style: none;
       }
-    </script>
+      gallery ul li { display: inline; margin-right: 8px; }
+      gallery ul img {
+	border: 5px solid #3e3e3e;
+	border-width: 10px 10px 30px;
+      }
+      gallery ul a:hover img {
+	border: 5px solid #fff;
+	border-width: 10px 10px 30px;
+	color: #fff;
+      }
+    </style>
   </head>
 <body>
-  <div id="page">
-    <div id="header"></div>
-      <div id="menu">
-	<div id="menu-content"></div>
-	<h4>
-	  <li><a href="" onclick="alert('Hello world')">Inicio</a></li>
-	  <li><a href="rails/info/properties" onclick="about(); return false">Acerca</a></li>
-	  <li><a href="rails/info/properties" onclick="about(); return false">Productos</a></li>
-	  <li><a href="rails/info/properties" onclick="about(); return false">Soporte</a></li>
-	  <li><a href="rails/info/properties" onclick="about(); return false">Sucursales</a></li>
-	  <li><a href="rails/info/properties" onclick="about(); return false">Contacto</a></li>		
-	</h4>
-	<div id="menu-content"></div>
-      </div>
-    <div id="content">
-      <div id="contenido-header">
-	Productos
-      </div>
-	<div id="contenido">
-	  <h1>Getting started</h1>
-	  <h2>Here&rsquo;s how to get rolling:</h2>
-	  <ol>          
-	  <li>
-	    <h2>Use <tt>script/generate</tt> to create your models and controllers</h2>
-	    <p>To see all available options, run it without parameters.</p>
-	  </li>
-	  </ol>
-	</div>
-      <div id="sidebar">
-	<h1>Este es el sidebar</h1>
-      </div>
+  <header>
+    <div id="header-logo"><img src="images/logo_GAP.png" /></div>
+  </header>
+  <nav>
+    <div id="bar"></div>
+    <h4>
+    <li><a href="" onclick="alert('Hello world')">Inicio</a></li>
+    <li><a href="rails/info/properties" onclick="about(); return false">Acerca</a></li>
+    <li><a href="rails/info/properties" onclick="about(); return false">Productos</a></li>
+    <li><a href="rails/info/properties" onclick="about(); return false">Soporte</a></li>
+    <li><a href="rails/info/properties" onclick="about(); return false">Sucursales</a></li>
+    <li><a href="rails/info/properties" onclick="about(); return false">Contacto</a></li>		
+    </h4>
+    <div id="bar"></div>
+  </nav>
+  <article>
+    <div id="section-header">
+      <h6>Productos</h6>
     </div>
-    <div id="footer">
-      <div id="footer-links">
-      <ul>
-       <li><h3>+ Links</h3></li>
-      </ul>
-    </div>
-  </div>
-</div>
+    <section>
+      <gallery>
+	<ul>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	</ul>
+	<ul>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	</ul>
+	<ul>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	  <li><a href="photos/image1.jpg" rel="lightbox"><img src="photos/thumb_image1.jpg" width="94" height="80" alt="" /></a></li>
+	</ul>
+      </gallery>
+    </section>
+    </article>
+    <sidebar>
+      Este es el sidebar
+    </sidebar>
+  <footer>
+    <ul>
+      <li><h3>+ Links</h3></li>
+      <li><h3>+ Links</h3></li>
+      <li><h3>+ Links</h3></li>
+      <li><h3>+ Links</h3></li>
+      <li><h3>+ Links</h3></li>
+    </ul>
+  </footer>
 </body>
 </html>                                                                                                                     

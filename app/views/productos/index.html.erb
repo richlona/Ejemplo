@@ -1,0 +1,54 @@
+<script type="text/javascript">
+    $("#uno").hover(function () {
+      $(this).css({ backgroundColor:"yellow";});
+    }, function () {
+    var cssObj = {
+      backgroundColor: "#ddd",
+    }
+      $(this).css(cssObj);
+    });
+</script>
+
+<style type="text/css">
+  #uno {
+    background-color: #000;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-left: 6px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    width: 200px;
+    opacity: 1;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    color: #fff;
+  }
+
+  #uno ul li {
+    list-style: none;
+    display: inline;
+    margin-right: 8px;
+  }
+</style>
+
+<h1>Listing productos</h1>
+<%= link_to 'New producto', new_producto_path %>
+<p></p>
+
+<% for producto in @productos %>
+  <div id="uno">
+    <ul>
+      <li>
+        <label>Nombre </label><%=h producto.name %><br />
+        <label>Fabricante </label><%=h producto.empresa %><br />
+        <label>Modelo </label><%=h producto.modelo %><br />
+        <label>A–o </label><%=h producto.ahno %><br />
+        <label>Precio </label><%=h producto.precio %><br />
+        <%= link_to '<img src="images/view.png" border="0" alt="view" />', producto %>
+        <%= link_to '<img src="images/edit.png" border="0" />', edit_producto_path(producto) %>
+        <%= link_to '<img src="images/delete.png" border="0" />', producto, :confirm => 'Are you sure?', :method => :delete %>
+      </li>
+    </ul>
+  </div>
+<% end %>
+

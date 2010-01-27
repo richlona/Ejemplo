@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  empresa: MyString
+  modelo: MyString
+  ahno: 2010-01-21
+  precio: 9.99
+
+two:
+  name: MyString
+  empresa: MyString
+  modelo: MyString
+  ahno: 2010-01-21
+  precio: 9.99

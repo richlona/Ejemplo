@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Productos: <%= controller.action_name %></title>
+  
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'layout' %>
+  
+  <style type="text/css">
+    #producto-gallery {
+      background-color: #000;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      padding-left: 6px;
+      padding-top:10px;
+      padding-bottom: 10px;
+      width: 200px;
+      opacity: 1;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      color: #fff;
+    }
+    #producto-gallery ul {list-style: none;}
+    #producto-gallery ul li { display: inline; margin-right: 8px;}
+
+  </style>
+</head>
+<body>
+    <header></header>
+      <nav>
+	<div id="bar"></div>
+	<h4>
+	  <li><a id="menuNav" href="">Inicio</a></li>
+	  <li><a href="rails/info/properties" onclick="about(); return false">Acerca</a></li>
+	  <li><a href="rails/info/properties" onclick="about(); return false">Productos</a></li>
+	  <li><a href="rails/info/properties" onclick="about(); return false">Soporte</a></li>
+	  <li><a href="rails/info/properties" onclick="about(); return false">Sucursales</a></li>
+	  <li><a href="rails/info/properties" onclick="about(); return false">Contacto</a></li>		
+	</h4>
+	<div id="bar"></div>
+      </nav>
+    <article>
+      <div id="section-header">
+	<img src="images/icon.png" /> <h5>Productos</h5>
+      </div>
+      <section>
+        <p style="color: green"><%= flash[:notice] %></p>
+        <%= yield  %>
+      </section>
+      <sidebar>
+	<h1>Este es el sidebar</h1>
+      </sidebar>
+    </article>
+    <footer>
+      <ul>
+        <li><h3>+ Links</h3></li>
+      </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  background-image: url("../images/bkgd.jpg");
+  background-repeat: no-repeat;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  background-color: #000;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  color: #333;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bolder;
+  color: #eee9d9;
+}
+
+h4 {
+  color: #eee9d9;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 28px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #eee9d9;
+}
+
+header, nav, article, footer{
+  display: block;
+  width: 960px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  background-image: url("../images/header.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  clear:both;
+  height: 165px;
+}
+
+header h2 {
+  margin: 0;
+  color: #eee9d9;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+#header-logo {
+  padding-top: 25px;
+  padding-left: 15px;
+}
+
+  nav a {
+    color: #eee9d9;
+    text-decoration: none;
+  }
+  nav a:hover{
+    background-color: #000;
+  }
+  nav a:active{
+    color: red;
+  }
+  nav li{
+    display: inline;
+    margin-right: 20px;
+    list-style-type: none;
+  }
+
+#bar {
+  border-top: 1px solid #eee9d9;
+  width: 960px;
+  margin-top: 6px;
+}
+
+article {
+  clear: both;
+  border-top: none;
+}
+
+section {
+  float: left;
+  width: 650px;
+  margin-left: 1px;
+  margin-bottom: 25px;
+  opacity: 0.5;
+}
+
+#section-header {
+  float: left;
+  width: 635px;
+  margin-top: 25px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 15px;
+  border: 1px solid #eee9d9;
+}
+
+#section-header img {
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-right: 1px solid #eee9d9;
+}
+
+sidebar {
+  position: absolute;
+  right: 355px;
+  margin-top: 25px;
+  float: right;
+  width: 300px;
+  padding-top: 15px;
+  border: solid 1px #fff;
+}
+
+sidebar ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+sidebar ul h3 {
+  margin-top: 25px;
+  font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+sidebar li {
+  list-style-type: none;
+}
+sidebar ul li {
+  margin-bottom: 5px;
+}
+
+footer {
+  clear: both;
+  background-color: #666;
+}
+
+footer a ul{
+  color: #fff;
+  text-decoration: none;
+  text-shadow: #fff;
+}
